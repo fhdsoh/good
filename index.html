@@ -6,7 +6,7 @@
 <style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 </head>
 <body>
-<title>Дента Плюс бизнес</title>
+<title>Сенетта бизнес</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap">
 <style>
@@ -55,11 +55,29 @@
   .contacts p { margin:0 0 14px }
   footer { background:var(--ink); color:#b9cbc4; font-size:13px } footer .in { padding-block:28px }
   @media (max-width:760px) { .hero .in, .book .in { grid-template-columns:1fr } nav { display:none } }
+  .promo { background:var(--cta); color:#fff; font-weight:700; text-align:center; padding-block:8px; font-size:15px }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; counter-reset:st }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; counter-increment:st }
+  .step::before { content:counter(st); display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--soft); color:var(--brand); font-weight:800; margin-bottom:10px }
+  .step h3 { margin:0 0 4px; font-size:17px } .step p { margin:0; color:var(--muted); font-size:15px }
+  .money { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+  .money .card { background:var(--brand); color:#fff; border:0 } .money .card p { color:#d9ece6 } .money b { font-size:34px; font-weight:800 }
+  .stars { color:#f2b01e; letter-spacing:2px }
+  .ba { position:relative; aspect-ratio:16/7; max-width:100%; border-radius:16px; overflow:hidden; border:1px solid var(--line) }
+  .ba div { position:absolute; inset:0; display:flex; align-items:flex-start; padding:16px 20px; font-weight:800 }
+  .ba .b1 { background:repeating-linear-gradient(90deg,#d6c59c 0 9%,#b9a374 9% 10%); color:#4a3a14 }
+  .ba .b2 { background:repeating-linear-gradient(90deg,#fbfbf7 0 9%,#dfe3de 9% 10%); color:var(--ink); justify-content:flex-end; clip-path:inset(0 0 0 50%) }
+  .ba input { position:absolute; left:5%; width:90%; bottom:12px }
+  .bar { position:fixed; left:0; right:0; bottom:0; z-index:6; display:none; gap:8px; background:var(--card); border-top:1px solid var(--line);
+    padding:10px max(16px, env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px, env(safe-area-inset-left,0px)) }
+  .bar .btn { flex:1; text-align:center; padding:12px }
+  @media (max-width:760px) { .bar { display:flex } body { padding-bottom:70px } .money { grid-template-columns:1fr } }
 </style>
 
-<div class="demo">Демо-шаблон: название, врачи, цены и отзывы примерные, заменим на данные клиники</div>
+<div class="demo">Демо-шаблон: клиника выдуманная, данные примерные</div>
+<div class="promo">Акция ноября: профессиональная чистка 3 500 ₽ вместо 4 500 ₽</div>
 <header><div class="in">
-  <span class="logo">Дента<span>Плюс</span></span>
+  <span class="logo">Сенетта</span>
   <nav><a href="#uslugi">Услуги и цены</a><a href="#vrachi">Врачи</a><a href="#voprosy">Вопросы</a><a href="#kontakty">Контакты</a></nav>
   <a class="btn" href="#zapis">Записаться</a>
 </div></header>
@@ -89,6 +107,22 @@
   </div>
 </div></section>
 
+<section><div class="in">
+  <h2>Как проходит лечение</h2>
+  <div class="steps">
+    <div class="step"><h3>Консультация</h3><p>Осмотр и снимок. 30 минут, 500 ₽.</p></div>
+    <div class="step"><h3>План и смета</h3><p>Расписываем этапы и точную цену. Ничего не добавляем потом.</p></div>
+    <div class="step"><h3>Лечение</h3><p>Под анестезией, в удобное для вас время.</p></div>
+    <div class="step"><h3>Гарантия</h3><p>Год на пломбы, 5 лет на импланты. Бесплатный контрольный осмотр.</p></div>
+  </div>
+</div></section>
+
+<section><div class="in">
+  <h2>До и после</h2>
+  <div class="ba"><div class="b1">ДО</div><div class="b2" id="b2">ПОСЛЕ</div><input type="range" id="baR" min="0" max="100" value="50" aria-label="Сравнить до и после"></div>
+  <p class="label" style="margin-top:10px">Здесь будут реальные фото работ клиники</p>
+</div></section>
+
 <section id="vrachi"><div class="in">
   <h2>Наши врачи</h2>
   <div class="grid">
@@ -102,9 +136,17 @@
   <h2>Отзывы</h2>
   <p class="label">Примеры. Сюда вставим настоящие отзывы клиники из 2ГИС</p>
   <div class="grid">
-    <div class="card rev"><q>Боялась идти, но лечение прошло совсем без боли. Врач всё объяснила.</q><span class="who">Пример отзыва</span></div>
-    <div class="card rev"><q>Поставил имплант, цена совпала с той, что назвали на консультации.</q><span class="who">Пример отзыва</span></div>
-    <div class="card rev"><q>Водим сюда детей, ребёнок не плачет и ждёт следующего визита.</q><span class="who">Пример отзыва</span></div>
+    <div class="card rev"><q>Боялась идти, но лечение прошло совсем без боли. Врач всё объяснила.</q><span class="who"><span class="stars">★★★★★</span> Пример отзыва</span></div>
+    <div class="card rev"><q>Поставил имплант, цена совпала с той, что назвали на консультации.</q><span class="who"><span class="stars">★★★★★</span> Пример отзыва</span></div>
+    <div class="card rev"><q>Водим сюда детей, ребёнок не плачет и ждёт следующего визита.</q><span class="who"><span class="stars">★★★★★</span> Пример отзыва</span></div>
+  </div>
+</div></section>
+
+<section><div class="in">
+  <h2>Лечение без лишних трат</h2>
+  <div class="money">
+    <div class="card"><b>0 ₽</b><p>переплаты: рассрочка на импланты и коронки до 12 месяцев</p></div>
+    <div class="card"><b>13%</b><p>вернёте налоговым вычетом. Выдадим справку и копию лицензии</p></div>
   </div>
 </div></section>
 
@@ -137,8 +179,10 @@
   </div>
 </div></section>
 
-<footer><div class="in">ООО «Дента Плюс» · ИНН 0000000000 · Лицензия № Л041-00000-00/00000000 (пример)<br>Политика обработки персональных данных · Имеются противопоказания, необходима консультация специалиста.</div></footer>
+<footer><div class="in">ООО «Сенетта» · ИНН 0000000000 · Лицензия № Л041-00000-00/00000000 (пример)<br>Политика обработки персональных данных · Имеются противопоказания, необходима консультация специалиста.</div></footer>
+<div class="bar"><a class="btn ghost" href="tel:+79000000000">Позвонить</a><a class="btn" href="#zapis">Записаться</a></div>
 <script>
+  document.getElementById("baR").oninput = e => document.getElementById("b2").style.clipPath = `inset(0 0 0 ${e.target.value}%)`;
   document.getElementById('f').addEventListener('submit', e => { e.preventDefault(); document.getElementById('ok').hidden = false; });
 </script>
 
