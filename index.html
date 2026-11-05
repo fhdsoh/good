@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<title>Дента Плюс бизнес</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+  /* Layout: sticky header, split hero, card grids, form beside contacts */
+  :root { --bg:#f4f7f5; --card:#ffffff; --ink:#15302a; --muted:#5b6f69; --brand:#2f6f5e; --soft:#dcebe5; --cta:#e2674a; --line:#e1e9e5;
+    --f:"Manrope", "Segoe UI", Roboto, Arial, sans-serif; color-scheme: light }
+  * { box-sizing:border-box }
+  body { background:var(--bg); color:var(--ink); font:16px/1.6 var(--f) }
+  body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--card) }
+  .in { max-width:1100px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)) }
+  a { color:inherit }
+  .demo { background:#fff1c2; color:#5a4800; font-size:13px; text-align:center; padding-block:6px }
+  header { position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--card); border-bottom:1px solid var(--line) }
+  header .in { display:flex; align-items:center; gap:20px; padding-block:12px; flex-wrap:wrap }
+  .logo { font-weight:800; font-size:20px; letter-spacing:-.02em } .logo span { color:var(--brand) }
+  nav { display:flex; gap:18px; font-size:15px; margin-left:auto; flex-wrap:wrap } nav a { text-decoration:none; color:var(--muted) } nav a:hover { color:var(--ink) }
+  .btn { display:inline-block; background:var(--cta); color:#fff; padding:13px 24px; border-radius:999px; font-weight:700; text-decoration:none; border:0; font:700 16px var(--f); cursor:pointer }
+  .btn.ghost { background:transparent; color:var(--ink); border:1.5px solid var(--ink) }
+  .btn:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline:3px solid var(--brand); outline-offset:2px }
+  .hero .in { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center; padding-block:56px }
+  .hero h1 { font-size:clamp(30px,5vw,50px); line-height:1.1; letter-spacing:-.03em; margin:0 0 16px; text-wrap:balance }
+  .hero p { color:var(--muted); font-size:18px; margin:0 0 26px; max-width:520px }
+  .actions { display:flex; gap:12px; flex-wrap:wrap }
+  .facts { background:var(--brand); color:#fff; border-radius:20px; padding:28px; display:grid; gap:18px }
+  .facts b { display:block; font-size:30px; font-weight:800; font-variant-numeric:tabular-nums } .facts span { opacity:.85; font-size:15px }
+  section .in { padding-block:48px }
+  h2 { font-size:clamp(24px,3.5vw,34px); letter-spacing:-.02em; margin:0 0 24px; text-wrap:balance }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; min-width:0 }
+  .card h3 { margin:0 0 6px; font-size:18px } .card p { margin:0 0 12px; color:var(--muted); font-size:15px }
+  .price { font-weight:800; color:var(--brand); font-variant-numeric:tabular-nums }
+  .doc { display:flex; gap:14px; align-items:center }
+  .ava { flex:none; width:56px; height:56px; border-radius:50%; background:var(--soft); color:var(--brand); display:grid; place-items:center; font-weight:800 }
+  .doc p { margin:0 }
+  .label { font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted) }
+  .rev q { display:block; margin-bottom:10px } .rev .who { font-size:14px; color:var(--muted) }
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px }
+  details + details { margin-top:10px }
+  summary { font-weight:700; cursor:pointer } details p { color:var(--muted); margin:10px 0 0 }
+  .book .in { display:grid; grid-template-columns:1fr 1fr; gap:32px }
+  form { background:var(--card); border-radius:20px; padding:26px; display:grid; gap:12px; border:1px solid var(--line) }
+  label { font-size:14px; color:var(--muted) }
+  input, select { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; font:inherit; background:var(--bg); color:var(--ink) }
+  .agree { display:flex; gap:8px; font-size:13px } .agree input { width:auto }
+  .ok { color:var(--brand); font-weight:700 }
+  .contacts p { margin:0 0 14px }
+  footer { background:var(--ink); color:#b9cbc4; font-size:13px } footer .in { padding-block:28px }
+  @media (max-width:760px) { .hero .in, .book .in { grid-template-columns:1fr } nav { display:none } }
+</style>
+
+<div class="demo">Демо-шаблон: название, врачи, цены и отзывы примерные, заменим на данные клиники</div>
+<header><div class="in">
+  <span class="logo">Дента<span>Плюс</span></span>
+  <nav><a href="#uslugi">Услуги и цены</a><a href="#vrachi">Врачи</a><a href="#voprosy">Вопросы</a><a href="#kontakty">Контакты</a></nav>
+  <a class="btn" href="#zapis">Записаться</a>
+</div></header>
+
+<div class="hero"><div class="in">
+  <div>
+    <h1>Лечим зубы бережно и без боли</h1>
+    <p>Семейная стоматология в Краснодаре. Честный план лечения с ценой до начала работы.</p>
+    <div class="actions"><a class="btn" href="#zapis">Записаться онлайн</a><a class="btn ghost" href="tel:+79000000000">+7 (900) 000-00-00</a></div>
+  </div>
+  <div class="facts">
+    <div><b>12 лет</b><span>работаем в Краснодаре</span></div>
+    <div><b>4,9 ★</b><span>средняя оценка в 2ГИС</span></div>
+    <div><b>500 ₽</b><span>консультация и план лечения</span></div>
+  </div>
+</div></div>
+
+<section id="uslugi"><div class="in">
+  <h2>Услуги и цены</h2>
+  <div class="grid">
+    <div class="card"><h3>Лечение кариеса</h3><p>Современная анестезия, светоотверждаемая пломба.</p><span class="price">от 4 900 ₽</span></div>
+    <div class="card"><h3>Лечение каналов</h3><p>Под микроскопом, с контрольным снимком.</p><span class="price">от 9 500 ₽</span></div>
+    <div class="card"><h3>Профессиональная чистка</h3><p>Ультразвук, Air Flow, полировка, фторирование.</p><span class="price">4 500 ₽</span></div>
+    <div class="card"><h3>Удаление зуба</h3><p>Простое и сложное, зубы мудрости.</p><span class="price">от 2 500 ₽</span></div>
+    <div class="card"><h3>Коронки</h3><p>Металлокерамика и цирконий.</p><span class="price">от 14 000 ₽</span></div>
+    <div class="card"><h3>Имплант под ключ</h3><p>Имплант, абатмент и коронка, гарантия.</p><span class="price">от 45 000 ₽</span></div>
+  </div>
+</div></section>
+
+<section id="vrachi"><div class="in">
+  <h2>Наши врачи</h2>
+  <div class="grid">
+    <div class="card doc"><div class="ava">АК</div><div><p><b>Анна Кузнецова</b></p><p class="label">Терапевт · стаж 12 лет</p></div></div>
+    <div class="card doc"><div class="ava">ИМ</div><div><p><b>Игорь Морозов</b></p><p class="label">Хирург-имплантолог · стаж 15 лет</p></div></div>
+    <div class="card doc"><div class="ava">МД</div><div><p><b>Мария Дмитриева</b></p><p class="label">Детский стоматолог · стаж 8 лет</p></div></div>
+  </div>
+</div></section>
+
+<section><div class="in">
+  <h2>Отзывы</h2>
+  <p class="label">Примеры. Сюда вставим настоящие отзывы клиники из 2ГИС</p>
+  <div class="grid">
+    <div class="card rev"><q>Боялась идти, но лечение прошло совсем без боли. Врач всё объяснила.</q><span class="who">Пример отзыва</span></div>
+    <div class="card rev"><q>Поставил имплант, цена совпала с той, что назвали на консультации.</q><span class="who">Пример отзыва</span></div>
+    <div class="card rev"><q>Водим сюда детей, ребёнок не плачет и ждёт следующего визита.</q><span class="who">Пример отзыва</span></div>
+  </div>
+</div></section>
+
+<section id="voprosy"><div class="in">
+  <h2>Частые вопросы</h2>
+  <details><summary>Больно ли лечить зубы?</summary><p>Нет. Мы используем современную анестезию, укол почти не чувствуется.</p></details>
+  <details><summary>Можно ли оплатить в рассрочку?</summary><p>Да, на протезирование и импланты есть рассрочка без переплаты.</p></details>
+  <details><summary>Работаете ли вы в выходные?</summary><p>В субботу с 9:00 до 16:00. Воскресенье выходной.</p></details>
+  <details><summary>Даёте ли вы справку для налогового вычета?</summary><p>Да, выдаём все документы для возврата 13% за лечение.</p></details>
+</div></section>
+
+<section class="book" id="zapis"><div class="in">
+  <form id="f">
+    <h2 style="margin:0 0 4px">Запись на приём</h2>
+    <div><label for="n">Имя</label><input id="n" required placeholder="Анна"></div>
+    <div><label for="p">Телефон</label><input id="p" type="tel" required placeholder="+7 900 000-00-00"></div>
+    <div><label for="s">Услуга</label><select id="s"><option>Консультация</option><option>Лечение кариеса</option><option>Чистка</option><option>Удаление</option><option>Импланты и коронки</option><option>Детский приём</option></select></div>
+    <div><label for="d">Удобный день</label><input id="d" type="date"></div>
+    <label class="agree"><input type="checkbox" id="a" required> Согласен с политикой обработки персональных данных</label>
+    <button class="btn" type="submit">Записаться</button>
+    <div id="ok" class="ok" hidden>Заявка принята. Администратор перезвонит в течение 15 минут.</div>
+  </form>
+  <div class="contacts" id="kontakty">
+    <h2>Контакты</h2>
+    <p><span class="label">Адрес</span><br>г. Краснодар, ул. Примерная, 1</p>
+    <p><span class="label">Телефон</span><br><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    <p><span class="label">WhatsApp</span><br><a href="https://wa.me/79000000000">Написать в WhatsApp</a></p>
+    <p><span class="label">Часы работы</span><br>Пн–Пт 9:00–20:00<br>Сб 9:00–16:00<br>Вс выходной</p>
+    <p><a href="https://yandex.ru/maps/?text=Краснодар">Открыть на Яндекс Картах</a></p>
+  </div>
+</div></section>
+
+<footer><div class="in">ООО «Дента Плюс» · ИНН 0000000000 · Лицензия № Л041-00000-00/00000000 (пример)<br>Политика обработки персональных данных · Имеются противопоказания, необходима консультация специалиста.</div></footer>
+<script>
+  document.getElementById('f').addEventListener('submit', e => { e.preventDefault(); document.getElementById('ok').hidden = false; });
+</script>
+
+</body>
+</html>
