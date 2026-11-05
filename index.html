@@ -72,6 +72,27 @@
     padding:10px max(16px, env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px, env(safe-area-inset-left,0px)) }
   .bar .btn { flex:1; text-align:center; padding:12px }
   @media (max-width:760px) { .bar { display:flex } body { padding-bottom:70px } .money { grid-template-columns:1fr } }
+  /* цветная версия */
+  :root { --c1:#2f6f5e; --c2:#e2674a; --c3:#3b7bd4; --c4:#f2b01e; --c5:#8a5cd1; --c6:#1ea5a5;
+    --t1:#e3f1ec; --t2:#fde9e3; --t3:#e4eefb; --t4:#fdf3d8; --t5:#efe7fa; --t6:#dff4f4 }
+  .hero { background:linear-gradient(120deg, #e3f1ec 0%, #e4eefb 55%, #fde9e3 100%) }
+  .hero h1 { background:linear-gradient(90deg, var(--c1), var(--c3)); -webkit-background-clip:text; background-clip:text; color:transparent }
+  .facts { background:linear-gradient(150deg, var(--c1), var(--c6) 60%, var(--c3)) }
+  #uslugi .card:nth-child(6n+1) { background:var(--t1); border-color:transparent } #uslugi .card:nth-child(6n+1) .price { color:var(--c1) }
+  #uslugi .card:nth-child(6n+2) { background:var(--t2); border-color:transparent } #uslugi .card:nth-child(6n+2) .price { color:var(--c2) }
+  #uslugi .card:nth-child(6n+3) { background:var(--t3); border-color:transparent } #uslugi .card:nth-child(6n+3) .price { color:var(--c3) }
+  #uslugi .card:nth-child(6n+4) { background:var(--t4); border-color:transparent } #uslugi .card:nth-child(6n+4) .price { color:#a87400 }
+  #uslugi .card:nth-child(6n+5) { background:var(--t5); border-color:transparent } #uslugi .card:nth-child(6n+5) .price { color:var(--c5) }
+  #uslugi .card:nth-child(6n+6) { background:var(--t6); border-color:transparent } #uslugi .card:nth-child(6n+6) .price { color:#137a7a }
+  .steps .step:nth-child(1)::before { background:var(--c1); color:#fff } .steps .step:nth-child(2)::before { background:var(--c3); color:#fff }
+  .steps .step:nth-child(3)::before { background:var(--c2); color:#fff } .steps .step:nth-child(4)::before { background:var(--c5); color:#fff }
+  #vrachi { background:var(--t3) }
+  #vrachi .card:nth-child(1) .ava { background:var(--c1); color:#fff } #vrachi .card:nth-child(2) .ava { background:var(--c3); color:#fff } #vrachi .card:nth-child(3) .ava { background:var(--c2); color:#fff }
+  .rev:nth-child(1) { border-top:4px solid var(--c2) } .rev:nth-child(2) { border-top:4px solid var(--c3) } .rev:nth-child(3) { border-top:4px solid var(--c4) }
+  .money .card:nth-child(1) { background:linear-gradient(135deg, var(--c1), var(--c6)) } .money .card:nth-child(2) { background:linear-gradient(135deg, var(--c5), var(--c3)) }
+  #voprosy { background:var(--t4) } #voprosy details[open] { border-color:var(--c4) }
+  .book { background:linear-gradient(160deg, var(--t2), var(--t5)) }
+  footer { background:linear-gradient(90deg, #15302a, #1b2d4a) }
 </style>
 
 <div class="demo">Демо-шаблон: клиника выдуманная, данные примерные</div>
